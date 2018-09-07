@@ -1,6 +1,5 @@
 package cn.tommyyang.jsontool;
 
-import com.google.gson.JsonElement;
 
 import java.util.List;
 import java.util.Map;
@@ -33,16 +32,12 @@ public interface JsonBuilder {
 
     JsonBuilder longField(String key, long value);
 
-    JsonBuilder json(String key, JsonElement jsonElement);
-
-    JsonBuilder json(String key, Supplier<JsonElement> jsonElement);
-
     JsonBuilder exception(String key, Exception exception);
 
     //JsonLogger stack();
 
-    JsonBuilder getLogger();
+    JsonBuilder newBuilder();
 
-    String toString();
+    String json();
 
 }
