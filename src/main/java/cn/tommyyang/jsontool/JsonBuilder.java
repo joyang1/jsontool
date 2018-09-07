@@ -34,8 +34,6 @@ public interface JsonBuilder {
 
     JsonBuilder exception(String key, Exception exception);
 
-    //JsonLogger stack();
-
     JsonBuilder newBuilder();
 
     String json();
